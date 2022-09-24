@@ -1,15 +1,30 @@
 #include "carray.h"
+#include "cbasedef.h"
 #include <stdlib.h>
 #include <string.h>
 
-#define throw_if_null(ptr)              if (ptr == NULL) { return CARRAY_ERR_NULL; }
 #define throw_if_null_length(len)       if (len == 0) { return CARRAY_ERR_LENGTH; } 
 #define throw_if_null_size(size)	    if (size == 0) { return CARRAY_ERR_SIZE; }
 #define throw_if_invalid_alloc(ptr)	    if (ptr == NULL) { return CARRAY_ERR_ALLOC; }
 #define throw_if_invalid_index(i, max)  if ((i) >= (max)) { return CARRAY_ERR_BOUNDS; }
 #define throw_if_invalid_size(s, arr_s) if ((s) != (arr_s)) { return CARRAY_ERR_SIZE; };
-#define throw_if_invalid_result(r)      if ((r) != CARRAY_OK) { return r; }
-#define success	                        (CARRAY_OK)
+
+carray_result carray_construct(carray* arr, size_t len, size_t size, )
+{
+	throw_if_null(arr);
+	throw_if_null_length(len);
+	throw_if_null_size(size);
+
+	if (arr->m_data)
+		free(arr->m_data);
+
+	arr->m_length = len;
+	arr->m_size = size;
+	arr->m_data = malloc(len * size);
+	throw_if_null(arr->m_data);
+
+	return success;
+}
 
 carray* carray_create(size_t len, size_t size) {
 	if (len == 0) { return NULL; }
@@ -18,10 +33,7 @@ carray* carray_create(size_t len, size_t size) {
 	carray* arr = malloc(sizeof(carray));
 	if (arr == NULL) { return NULL; }
 
-	arr->m_length = len;
-	arr->m_size = size;
-	arr->m_data = malloc(len * size);
-	if (arr->m_data == NULL) { return NULL; }
+	
 
 	return arr;
 }

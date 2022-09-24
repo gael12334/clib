@@ -21,6 +21,7 @@ typedef struct carray carray;
 typedef enum carray_result carray_result;
 typedef int(*carray_compare_func)(carray* a, carray* b);
 
+carray_result carray_construct(carray* arr, size_t len, size_t size);
 carray* carray_create(size_t len, size_t size);
 carray* carray_copy(carray* arr);
 carray_result carray_destroy(carray* arr);

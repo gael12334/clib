@@ -24,9 +24,15 @@
     <ClCompile Include="carray.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="csmartptr.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ctest.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="cbasedef.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

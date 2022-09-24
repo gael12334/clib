@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClCompile Include="carray.c" />
     <ClCompile Include="carray.h" />
+    <ClCompile Include="csmartptr.h" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cbasedef.h" />
     <ClInclude Include="ctest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

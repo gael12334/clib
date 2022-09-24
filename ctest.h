@@ -3,6 +3,7 @@
 
 #define ctest_end end_test_label:
 #define ctest_fail_output(msg, parameter, ...) printf("[fail] line: %i, function: %s\nerror: %s " ##parameter , __LINE__, __func__, msg, __VA_ARGS__)
+#define ctest_test_pass printf("[pass]: function %s passed.", __func__);
 #define ctest_value_type_int "%ld"
 #define ctest_value_type_float "%lf"
 #define ctest_value_type_ptr "%p"

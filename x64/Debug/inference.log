@@ -1,2 +1,5 @@
-﻿  main.c
-  inference.vcxproj -> C:\Users\nfswt\source\repos\inference\x64\Debug\inference.exe
+﻿  carray.c
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(700,5): error MSB6006: Arrêt de "CL.exe" avec le code 2.
+C:\Users\nfswt\source\repos\inference\inference\carray.c(12,70): error C2059: erreur de syntaxe : ')'
+C:\Users\nfswt\source\repos\inference\inference\carray.c(13,1): error C2143: erreur de syntaxe : absence de ')' avant '{'
+C:\Users\nfswt\source\repos\inference\inference\carray.c(126,14): warning C4090: 'fonction' : qualificateurs 'const' différents
